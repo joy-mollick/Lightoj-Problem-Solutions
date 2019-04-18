@@ -1,0 +1,44 @@
+
+    #include<iostream>
+    #include<cstdio>
+    #include<vector>
+    #include<cstring>
+    #include<algorithm>
+    #include<cmath>
+     
+   /*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+     
+    using namespace std;
+     
+    int main()
+     
+    {
+        int T,sum=0,k,l,count=0,n,P,Q,a,pount=0,y=0;
+     
+        vector<int>h;
+     
+        cin>>T;
+     
+        for(int i=1;i<=T;i++)
+        {
+            cin>>n>>P>>Q;
+            for(int j=0;j<n;j++)
+            {
+                cin>>a;
+                h.push_back(a);
+            }
+            for(y=0;y<n;y++)
+            {
+                sum+=h[y];
+                if(y>=P||sum>Q)
+                    break;
+            }
+            printf("Case %d: %d\n",i,y);
+            sum=0;
+            h.clear();
+        }
+         return 0;
+    }
+     
