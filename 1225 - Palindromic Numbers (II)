@@ -15,7 +15,9 @@
 #include<cstring>
 #include<algorithm>
 
-//Nayeem Mollick Joy ,Applied Physics And Electronic Engineering, University Of Rajshahi.
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
 
 bool palindrome(int x)
 {
