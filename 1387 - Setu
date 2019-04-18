@@ -1,0 +1,46 @@
+
+#include<iostream>
+#include<cstdio>
+#include<set>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+ 
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+ 
+using namespace std;
+ 
+int main()
+ 
+{
+    int T,sum=0,k,l;
+ 
+    cin>>T;
+ 
+    string t;
+ 
+    for(int i=1;i<=T;i++)
+ 
+    {
+        cin>>k;
+        printf("Case %d:\n",i);
+        for(int j=0;j<k;j++)
+        {
+            cin>>t;
+            if(t[0]=='d')
+            {
+                cin>>l;
+                sum+=l;
+            }
+            else{
+                cout<<sum<<endl;
+            }
+        }
+        sum=0;
+    }
+ 
+    return 0;
+ 
+}
