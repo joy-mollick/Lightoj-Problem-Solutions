@@ -1,0 +1,49 @@
+
+
+    #include<iostream>
+    #include<cstdio>
+    #include<cmath>
+     
+    /*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+     
+    using namespace std;
+     
+    typedef long long sll;
+     
+    int main ()
+        {
+         int T;
+     
+         scanf ("%d" , &T);
+     
+         int i;
+     
+         for (i = 1; i <= T; i++)
+         {
+     
+          sll fr , fc , sr , sc;
+     
+          scanf ("%lld%lld%lld%lld" , &fr , &fc , &sr , &sc);
+     
+          printf ("Case %d: " , i);
+     
+          if (fr == sr && fc == sc) puts("0");
+     
+          else
+     
+            {
+     
+           if ((fr + fc + sr + sc) % 2 == 0)
+     
+           {
+            puts(abs (fr - sr) == abs (fc - sc)?"1":"2");
+           }
+     
+           else puts("impossible");
+              }
+     }
+     return 0;
+        }
+     
