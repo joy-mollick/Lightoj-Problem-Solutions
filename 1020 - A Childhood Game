@@ -1,0 +1,46 @@
+
+
+    #include<cstdio>
+    #include<iostream>
+    #include<algorithm>
+    #include<vector>
+    #include<cstring>
+    #include<cmath>
+     
+    /*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+     
+    using namespace std;
+     
+    int main()
+     
+    {
+        long n,t,i=0;
+        string s;
+        cin>>t;
+        while(t--)
+        {
+            cin>>n>>s;
+     
+            if(s[0]=='A')
+            {
+                if(n%3==1)
+                printf("Case %d: Bob\n",++i);
+                else
+                printf("Case %d: Alice\n",++i);
+            }
+     
+            else
+            {
+                if(n%3==0)
+                printf("Case %d: Alice\n",++i);
+                else
+                printf("Case %d: Bob\n",++i);
+            }
+        }
+     
+        return 0;
+     
+    }
+     
