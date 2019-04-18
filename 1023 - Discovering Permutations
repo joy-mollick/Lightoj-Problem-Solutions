@@ -1,0 +1,47 @@
+
+
+#include <bits/stdc++.h>
+#include<cstdio>
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<cstring>
+#include<cmath>
+ 
+using namespace std;
+ 
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+ 
+int main()
+{
+    int n,T;
+    cin>>T;
+    for(int i=1;i<=T;i++)
+    {
+        int N,K;
+ 
+       string str="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+ 
+       printf("Case %d:\n",i);
+ 
+       cin>>N>>K;
+ 
+       if(N==1 && K>1) K=1;
+       if(N==2 && K>2) K=2;
+       if(N==3 && K>6) K=6;
+       if(N==4 && K>24)K=24;
+ 
+       str.erase(N);
+ 
+       cout<<str<<endl;
+       while(--K)
+       {  next_permutation(str.begin(),str.end());
+          cout<<str<<endl;
+       }
+ 
+    }
+ 
+    return 0;
+}
