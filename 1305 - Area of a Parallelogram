@@ -1,0 +1,57 @@
+
+#include<iostream>
+#include<cstdio>
+#include<vector>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+ 
+#define MAXX 5000003
+ 
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+ 
+using namespace std;
+ 
+    int main()
+{
+    int T;
+ 
+    cin>>T;
+ 
+    double  AX,BX,AY,BY,DX,DY,CX,CY;
+ 
+     double a1,a2,area,a3,s;
+ 
+    for(int i=1;i<=T;i++)
+    {
+        cin>>AX>>AY>>BX>>BY>>CX>>CY;
+ 
+    DX=AX+CX-BX;
+ 
+    DY=AY+CY-BY;
+ 
+    a1=sqrt((AX-DX)*(AX-DX)+(AY-DY)*(AY-DY));
+ 
+    a2=sqrt((AX-BX)*(AX-BX)+(AY-BY)*(AY-BY));
+ 
+ 
+    a3=sqrt((BX-DX)*(BX-DX)+(BY-DY)*(BY-DY));
+ 
+    s=(a1+a2+a3)/2.0;
+ 
+    area=sqrt(s*(s-a1)*(s-a2)*(s-a3));
+ 
+    if(area<0)
+    {
+        area=area*(-1);
+    }
+ 
+   printf("Case %d: %.0lf %.0lf %.0lf\n",i,DX,DY,2*area);
+ 
+    }
+ 
+    return 0;
+ 
+}
