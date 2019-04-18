@@ -1,0 +1,58 @@
+
+
+#include<iostream>
+#include<cstdio>
+#include<vector>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+ 
+#define MAXX 5000003
+ 
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+ 
+using namespace std;
+ 
+    int main()
+{
+    vector<long long int>r;
+    long long int T,p,l;
+    cin>>T;
+    for(long long int i=1;i<=T;i++)
+ 
+    {
+        cin>>p>>l;
+        cout<<"Case "<<i<<":";
+        if((p-l)<=l||(p-l)==0)
+        {
+            cout<<" impossible"<<endl;
+        }
+        else{
+        for(long long int j=1;j<=sqrt(p-l);j++)
+        {
+            if((p-l)%j==0)
+            {
+                if(j*j==(p-l))
+                {
+                    r.push_back(j);
+                    break;
+                }
+                r.push_back(j);
+                r.push_back((p-l)/j);
+            }
+        }
+        sort(r.begin(),r.end());
+        for(vector<long long int>::iterator joy=r.begin();joy!=r.end();joy++)
+        {
+            if((*joy)>l)
+            cout<<" "<<(*joy);
+        }
+        cout<<endl;
+        r.clear();
+    }
+    }
+ 
+    return 0;
+}
