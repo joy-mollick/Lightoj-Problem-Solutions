@@ -1,0 +1,36 @@
+/*
+Nayeem Mollick Joy , Electrical & Electronic Engineering , University of Rajshahi.
+Passionate Contest Programmer , Coder , Android Developer */
+
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<algorithm>
+ 
+using namespace std;
+ 
+    int main()
+    {
+       unsigned long int T,b,a[3],i;
+        cin>>T;
+        for( i=1;i<=T;i++)
+        {
+                cin>>a[0]>>a[1]>>a[2];
+ 
+            sort(a,a+3);
+ 
+            cout << "Case "<< i <<": ";
+ 
+            if(a[0]*a[0]+a[1]*a[1]==a[2]*a[2])
+ 
+            {
+                cout<< "yes" <<endl;
+            }
+            else{
+                cout<< "no" <<endl;
+            }
+        }
+ 
+        return 0;
+    }
+ 
