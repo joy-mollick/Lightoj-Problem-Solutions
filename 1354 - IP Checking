@@ -1,0 +1,52 @@
+
+    #include<iostream>
+    #include<cstdio>
+    #include<set>
+    #include<cstring>
+    #include<algorithm>
+    #include<cmath>
+     
+    //Nayeem Shahriar Joy ,Applied Physics And Electronic Engineering, University Of Rajshahi.
+     
+    using namespace std;
+     
+    bool binary(int a,long long int A)
+     
+    {
+        int ans=0,count=0;
+        while(A!=0)
+        {
+            if(A%10==1){
+            ans=ans+pow(2,count);
+            }
+            A=A/10;
+            count++;
+        }
+        return ans==a;
+    }
+    int main()
+     
+    {
+        int T,a,b,c,d;
+        cin>>T;
+        char e;
+        long long int A,B,C,D;
+        for(int i=1;i<=T;i++)
+     
+        {
+           
+            cin>>a>>e>>b>>e>>c>>e>>d;
+           
+            cin>>A>>e>>B>>e>>C>>e>>D;
+           
+            if(binary(a,A) && binary(b,B) && binary(c,C) && binary(d,D))
+            {
+                printf("Case %d: Yes\n",i);
+            }
+            else{
+                printf("Case %d: No\n",i);
+            }
+        }
+        return 0;
+    }
+     
